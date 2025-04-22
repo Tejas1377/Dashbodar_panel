@@ -12,7 +12,7 @@ const SocialStatsCard = () => {
       text: 'Lorem Ipsum is simply dummy text of the printing',
     },
     {
-      title: 'twitter',
+      title: 'Twitter',
       icon: <FaTwitter size={24} color="#ffffff" />,
       color: '#EF5350',
       downloads: '231.2w downloads',
@@ -28,10 +28,11 @@ const SocialStatsCard = () => {
   ];
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'space-around', padding: '20px' }}>
+    <div className="d-flex flex-wrap justify-content-around p-3 gap-3">
       {cards.map((card, index) => (
         <CCard
           key={index}
+          className="flex-fill flex-lg-grow-0"
           style={{
             width: '350px',
             backgroundColor: card.color,
@@ -42,10 +43,10 @@ const SocialStatsCard = () => {
         >
           <CCardBody>
             <CRow>
-              <CCol xs="3" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <CCol xs="3" className="d-flex align-items-center justify-content-center">
                 <div style={{ marginBottom: '10px' }}>{card.icon}</div>
               </CCol>
-              <CCol xs="9" style={{ textAlign: 'left', paddingLeft: '15px' }}>
+              <CCol xs="9" className="text-start ps-3">
                 <CCardTitle style={{ fontSize: '18px', color: '#ffffff', marginBottom: '5px' }}>
                   {card.title}
                 </CCardTitle>
